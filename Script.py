@@ -462,15 +462,15 @@ Prime Membership Progress
 
 12 Months - 300 Rs [1 Month Free Trial]
 
-♛ UPI ID »»————> harikushal234@okicici
+♛ PAYMENT ID »»————> CONTACT @GyanaSangraha_adm
 
 Would you like to become a Prime Member? Follow these steps:-
 
-✤ Step 1: Go to any payment app like Google PAY, PAYTM,
+✤ Step 1: Go to any payment app like E-sewa, Airtm , Binance,
 ✤ Step 2: Pay using UPI ID depending on your plan.
 ✤ Step 3 : Send screenshot to our admin or owner Or contact me to send a screenshot.
 
-Any doubts or how to become a prime member? contact me @KUSHALHK @TG_Bots_Supporter</code></b>"""
+Any doubts or how to become a prime member? contact me @GyanaSangraha_adm </code></b>"""
 
 
 
