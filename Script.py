@@ -2,12 +2,12 @@ class script(object):
     START_TXT = """<b>Hᴇʟʟᴏ {},
 Mʏ Nᴀᴍᴇ Is <a href=https://t.me/{}>{}</a>, I Cᴀɴ Pʀᴏᴠɪᴅᴇ Mᴏᴠɪᴇ Fᴏʀ Yᴏᴜ Jᴜsᴛ Aᴅᴅ Mᴇ Iɴ Yᴏᴜʀ Gʀᴏᴜᴘ Oʀ Jᴏɪɴ Oᴜʀ Gʀᴏᴜᴘ
 
-🌿 𝐌𝐚𝐢𝐧𝐭𝐚𝐢𝐧𝐞𝐝 𝐁𝐲 : <a href='https://t.me/GyanaSangraha_adm'>𝐃𝐄𝐕𝐄𝐋𝐎𝐏𝐄𝐑</a></b>"""
+🌿 𝐌𝐚𝐢𝐧𝐭𝐚𝐢𝐧𝐞𝐝 𝐁𝐲 : <a href='https://t.me/MalsalaAdmin'>𝐃𝐄𝐕𝐄𝐋𝐎𝐏𝐄𝐑</a></b>"""
 
     HELP_TXT = """<b>Hᴇʏ {}
 Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Mʏ Cᴏᴍᴍᴀɴᴅs.
 
-🌿 𝐌𝐚𝐢𝐧𝐭𝐚𝐢𝐧𝐞𝐝 𝐁𝐲 : <a href='https://t.me/GyanaSangraha_adm'>𝐃𝐄𝐕𝐄𝐋𝐎𝐏𝐄𝐑</a></b>"""
+🌿 𝐌𝐚𝐢𝐧𝐭𝐚𝐢𝐧𝐞𝐝 𝐁𝐲 : <a href='https://t.me/MalsalaAdmin'>𝐃𝐄𝐕𝐄𝐋𝐎𝐏𝐄𝐑</a></b>"""
  
     ABOUT_TXT = """<b>⍟───[ MY ᴅᴇᴛᴀɪʟꜱ ]───⍟
 ‣ ᴍʏ ɴᴀᴍᴇ : <a href=https://t.me/ProfessorMasalaBot>𝗣𝗥𝗢𝗙𝗘𝗦𝗦𝗢𝗥 𝗠</a>
@@ -72,7 +72,7 @@ Cᴏᴍᴍᴀɴᴅs Aɴᴅ Usᴀɢᴇ:
     EXTRAMOD_TXT = """ʜᴇʟᴘ: Exᴛʀᴀ Mᴏᴅᴜʟᴇs
 <b>ɴᴏᴛᴇ:</b>
 my features Stay here new features coming soon...  
- <b>✯ Maintained by : <a href=https://t.me/GyanaSangraha_adm>OWNER</a></b>
+ <b>✯ Maintained by : <a href=https://t.me/MalsalaAdmin>OWNER</a></b>
   
  <b>✯ Join here : <a href=https://t.me/MovieMasala_Update>Join my updateds</a></b> 
   
@@ -459,7 +459,7 @@ Prime Membership Progress
 
 12 Months - 300 Rs [1 Month Free Trial]
 
-♛ PAYMENT ID »»————> CONTACT @GyanaSangraha_adm
+♛ PAYMENT ID »»————> CONTACT @MalsalaAdmin
 
 Would you like to become a Prime Member? Follow these steps:-
 
@@ -467,7 +467,7 @@ Would you like to become a Prime Member? Follow these steps:-
 ✤ Step 2: Pay using UPI ID depending on your plan.
 ✤ Step 3 : Send screenshot to our admin or owner Or contact me to send a screenshot.
 
-Any doubts or how to become a prime member? contact me @GyanaSangraha_adm </code></b>"""
+Any doubts or how to become a prime member? contact me @MalsalaAdmin </code></b>"""
 
 
 
