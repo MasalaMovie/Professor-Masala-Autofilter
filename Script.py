@@ -217,10 +217,7 @@ Tɪᴘ: Sᴇʟᴇᴄᴛ "Lᴀɴɢᴜᴀɢᴇs" ᴏʀ "Sᴇᴀsᴏɴs" Bᴜᴛᴛ
 𝗠𝗲𝘀𝘀𝗮𝗴𝗲 <b>: {}</b>"""
 
     CAPTION = """ 
-<b>══════════════════
-🗂 @wibimovie {file_name}
-═════════════════════ 
-𝐉𝐎𝐈𝐍 𝐇𝐄𝐑𝐄 :- @wibimovie_requests</b>"""
+<a href= "https://t.me/wibimovie"><b>{filename}</b></a>"""
     
     IMDB_TEMPLATE_TXT = """
 <b>Query: {query}
