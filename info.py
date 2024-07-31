@@ -1,7 +1,6 @@
 import re
 from os import environ,getenv
 from Script import script 
-from pyrogram.types import WebAppInfo
 
 id_pattern = re.compile(r'^.\d+$')
 def is_enabled(value, default):
@@ -91,7 +90,6 @@ SEASONS = ["season 1" , "season 2" , "season 3" , "season 4", "season 5" , "seas
 # Online Stream and Download
 NO_PORT = bool(environ.get('NO_PORT', False))
 APP_NAME = None
-InlineKeyboardButton('🧿 Wᴀᴛᴄʜ ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ 🖥', web_app=WebAppInfo(url=web_link))
 if 'DYNO' in environ:
     ON_HEROKU = True
     APP_NAME = environ.get('APP_NAME')
