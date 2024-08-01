@@ -8,23 +8,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{file_name}}</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.plyr.io/3.6.9/plyr.css" />
     <style>
         body {
-            background-color: #141414; /* Netflix background */
+            background-image: url('/mnt/data/yE6pJnfLQnK6lafurmR__w.webp');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             color: #ffffff;
         }
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+        }
         .header, .footer {
-            background-color: #000000;
+            background-color: rgba(0, 0, 0, 0.9);
             color: #e50914; /* Netflix red */
             padding: 10px 0;
             text-align: center;
+            border-radius: 10px;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            color: #e50914; /* Netflix red */
         }
         .container {
             padding: 20px;
@@ -35,11 +50,34 @@
             align-items: center;
             flex-direction: column;
             margin: 20px 0;
+            position: relative;
         }
         .video-player video {
             width: 100%;
             max-width: 800px;
             border: 5px solid #e50914; /* Netflix red border */
+        }
+        .rgb-lighting {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            pointer-events: none;
+            mix-blend-mode: screen;
+        }
+        .rgb-lighting div {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            background: linear-gradient(90deg, red, yellow, green, cyan, blue, magenta, red);
+            animation: rgb 3s linear infinite;
+        }
+        @keyframes rgb {
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(360deg); }
         }
         .external-players {
             display: flex;
@@ -55,6 +93,7 @@
             border: 1px solid #444;
             transition: transform 0.3s, box-shadow 0.3s;
             cursor: pointer;
+            border-radius: 10px;
         }
         .external-players .card:hover {
             transform: translateY(-5px);
@@ -71,20 +110,54 @@
             padding: 10px 20px;
             margin: 5px;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+            border-radius: 5px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            font-weight: bold;
         }
         .control-buttons button:hover {
             background-color: #ff0a16;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .contact-admin {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .contact-admin a {
+            background-color: #0088cc; /* Telegram blue */
+            color: #ffffff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+            font-size: 1rem;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .contact-admin a:hover {
+            background-color: #006699;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .footer {
+            margin-top: 20px;
+            padding-top: 10px;
         }
     </style>
 </head>
 <body>
-    <header class="header">
+    <header class="header overlay">
         <h1>{{file_name}}</h1>
     </header>
     
-    <div class="container">
+    <div class="container overlay">
         <div class="video-player">
+            <div class="rgb-lighting">
+                <div></div>
+            </div>
             <video id="player" class="player" playsinline controls>
                 <source src="{{file_url}}" type="video/mp4">
             </video>
@@ -114,50 +187,59 @@
                 <p>KM Player</p>
             </div>
         </div>
+
+        <div class="contact-admin">
+            <a href="https://t.me/your_admin_username" target="_blank">Contact Admin on Telegram</a>
+        </div>
     </div>
     
-    <footer class="footer">
-        Maintained by <a href="https://t.me/masalas_universe" style="color: #e50914;">Masala Universe</a>
+    <footer class="footer overlay">
+        <p>Copyright by MasalaUniverse</p>
     </footer>
-    
+
     <script src="https://cdn.plyr.io/3.6.9/plyr.polyfilled.js"></script>
     <script>
         const player = new Plyr('#player');
 
-        function downloadFile(url, fileName) {
+        function downloadFile(url, filename) {
             const a = document.createElement('a');
             a.href = url;
-            a.download = fileName;
+            a.download = filename;
             document.body.appendChild(a);
             a.click();
             document.body.removeChild(a);
-        }
+                     }
 
         function sendUrl(url) {
-            window.open(`whatsapp://send?text=${encodeURIComponent(url)}`, '_blank');
+            window.open(`mailto:?subject=Check%20this%20out&body=Here%20is%20the%20link%20to%20the%20video:%20${url}`, '_blank');
         }
 
         function copyUrl(url) {
             navigator.clipboard.writeText(url).then(() => {
                 alert('URL copied to clipboard');
+            }).catch(err => {
+                alert('Failed to copy URL');
             });
         }
 
         function vlc_player(url) {
-            window.location.href = `vlc://${url}`;
+            window.open(`vlc://${url}`);
         }
 
         function mx_player(url) {
-            window.location.href = `intent:${url}#Intent;package=com.mxtech.videoplayer.ad;end`;
+            window.open(`intent:${url}#Intent;package=com.mxtech.videoplayer.ad;end`);
         }
 
         function playit_player(url) {
-            window.location.href = `playit://${url}`;
+            window.open(`intent:${url}#Intent;package=com.playit.videoplayer;end`);
         }
 
         function km_player(url) {
-            window.location.href = `kmplayer://${url}`;
+            window.open(`intent:${url}#Intent;package=com.kmplayer;end`);
         }
+
+        // Initialize WOW.js for animation effects
+        new WOW().init();
     </script>
 </body>
 </html>
